@@ -1,0 +1,23 @@
+library's path:
+ls -F ~/Documents/JavaLibraries/javafx-sdk-26/lib && ls -F mysql-connector-j-9.6.0.jar
+
+.class file banau cha;
+javac --module-path ~/Documents/JavaLibraries/javafx-sdk-26/lib --add-modules javafx.controls,javafx.media -cp ".:mysql-connector-j-9.6.0.jar" database/DBConnection.java server/VideoServer.java client/VideoClient.java -d .
+
+source code to bytecode:
+ls -R client server database
+
+execute:
+java --module-path ~/Documents/JavaLibraries/javafx-sdk-26/lib --add-modules javafx.controls,javafx.media -cp ".:mysql-connector-j-9.6.0.jar" client.VideoClient
+
+
+db connectivity:
+ls -lh mysql-connector-j-9.6.0.jar
+
+
+compile server and db logic:
+javac -cp ".:mysql-connector-j-9.6.0.jar" database/DBConnection.java server/VideoServer.java
+
+
+run server:
+java -cp ".:mysql-connector-j-9.6.0.jar" server.VideoServer
